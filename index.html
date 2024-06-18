@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <!-- google fonts -->
+    <!-- PlayfairDisplay -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/cff6776d6f.js" crossorigin="anonymous"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="converter">
+        <h1 class="converter__heading">Currency Converter</h1>
+        <form action="#" method="post">
+            <label for="amount-input">Enter Amount</label>
+            <input type="number" name="amount-input" id="amount-input">
+            <div class="converting-area">
+                <div class="currency-area">
+                    <div class="currency-area-box">
+                        <p class="currency-box-label">From</p>
+                        <div class="currency-box">
+                            <img src="https://flagcdn.com/108x81/eu.png" alt="European Union">
+                            <button class="active-currency-btn" id="currency-select-from-btn"><span id="base_code" class="selected-currency-name">EUR</span><i class="fa-solid fa-chevron-down"></i></button>
+                            <div class="currency-options-container">
+                                <!-- <div class="currency-option"><img src="https://flagcdn.com/216x162/fr.png" alt=""><span>bgn</span></div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" id="swap-button"><img src="exchange-icon.svg" alt="swap icon"></button>
+                    <div class="currency-area-box">
+                        <p class="currency-box-label">To</p>
+                        <div class="currency-box">
+                            <img src="https://flagcdn.com/108x81/us.png" alt="European Union">
+                            <button class="active-currency-btn" id="currency-select-to-btn"><span id="target_code" class="selected-currency-name">USD</span><i class="fa-solid fa-chevron-down"></i></button>
+                            <div class="currency-options-container">
+                                <!-- template option here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-display"></div>
+                <button type="button" class="rate-button" id="get-rate-btn">Get Exchange Rate</button>
+            </div>
+        </form>
+    </div>
+    <script src="currency-country-list.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
