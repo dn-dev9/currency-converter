@@ -6,18 +6,6 @@ const currency_options_container = document.querySelectorAll('.currency-options-
 const message_display = document.querySelector('.message-display');
 const get_rate_btn = document.getElementById('get-rate-btn');
 
-/* 
-    <div class="currency-option"><img src="https://flagcdn.com/216x162/fr.png" alt="">bgn</div>
-*/
-
-/* 
-    fill the options with flags and names from array
-    show one as default
-    click from/to btn show all the options
-    swap button functionality
-    fetch the rate with form value
-*/
-
 currency_options_container.forEach((container, containerIndex) => {
     for (const [countryCode, countryCurr] of Object.entries(country_list)) {
         container.insertAdjacentHTML("beforeend", `<div class="currency-option"><img src="https://flagcdn.com/216x162/${countryCurr.toLowerCase()}.png" alt="${countryCode}"><span>${countryCode}</span></div>`)
@@ -79,5 +67,4 @@ get_rate_btn.addEventListener('click', function (e) {
         }).catch(err => {
             message_display.innerText = 'Something Went Wrong';
         })
-
 });
